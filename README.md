@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+This is my animated Hero that wave in ThreeJS
+
+![image](https://user-images.githubusercontent.com/53175180/143016932-666f5b02-b709-4b2c-b67b-4b9b1e5b7257.png)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
