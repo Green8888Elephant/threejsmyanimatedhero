@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
 import './App.css';
+
+import {Canvas} from "@react-three/fiber";
+import Mewaving from './Model/Mewaving.js'
+import { OrbitControls } from "@react-three/drei";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Canvas>
+        <OrbitControls />
+        {/*<mesh attach='geometry' ></mesh>*/}
+        <directionalLight intensity={0.3} />
+        <directionalLight intensity={0.6} position={[0,0,1]}/>
+        <ambientLight intensity={0.2} position={[50,0,0]}/>
+        {/*<Box />*/}
+        <Suspense fallback={null}>
+            <group position={[0,-0.5,0]}>
+                <Mewaving />
+            </group>
+            {/*<Box />*/}
+        </Suspense>
+    </Canvas>
   );
 }
 
